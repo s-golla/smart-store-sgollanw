@@ -76,29 +76,31 @@ py scripts/data_prep.py
 
 ## Initial Package List (For Reference)
 
--pip
--setuptools
--wheel
--loguru
--python-dotenv
--pyttsx3
--ipython
--jupyter
--ipykernel
--ipywidgets
--pandas
--matplotlib
--seaborn
+```
+pip
+setuptools
+wheel
+loguru
+python-dotenv
+pyttsx3
+ipython
+jupyter
+ipykernel
+ipywidgets
+pandas
+matplotlib
+seaborn
+```
 
 ## Commands Used (Frequently) to update GitHub 
 
 ```
--- to check the status
+# to check the status
 git status
--- to stage the files
+# to stage the files
 git add .
--- to commit with message
+# to commit with message
 git commit -m "<<message to commit>>"
--- to push into remote branch
+# to push into remote branch
 git push -u origin main
 ```
