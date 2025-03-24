@@ -36,6 +36,14 @@ python3 -m datafun_venv_checker.venv_checker
 python3 scripts/data_prep.py
 ```
 
+### Step 1F - Run the Data Preparation Scripts to cleanup the data
+
+```shell
+python3 scripts/data_preparation/prepare_customers_data.py
+python3 scripts/data_preparation/prepare_products_data.py
+python3 scripts/data_preparation/prepare_sales_data.py
+```
+
 -----
 
 ## Project Setup Guide (2-Windows)
@@ -70,6 +78,14 @@ py -m datafun_venv_checker.venv_checker
 
 ```shell
 py scripts/data_prep.py
+```
+
+### Step 2F - Run the Data Preparation Scripts to cleanup the data
+
+```shell
+py scripts/data_preparation/prepare_customers_data.py
+py scripts/data_preparation/prepare_products_data.py
+py scripts/data_preparation/prepare_sales_data.py
 ```
 
 -----

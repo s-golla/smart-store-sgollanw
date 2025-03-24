@@ -1,0 +1,9 @@
+ProductID,ProductName,Category,UnitPrice,StockQuantity,Supplier
+101,laptop,Electronics,793.12,5,Dell
+102,hoodie,Clothing,39.1,2,Gap
+103,cable,Electronics,22.76,10,Belkin
+104,hat,Clothing,43.1,1,Puma
+105,football,Sports,19.78,2,Nike
+106,controller,Electronics,88.98,4,Sony
+107,jacket,Clothing,67.02,3,Columbia
+108,protector,Electronics,12.56,3,APC
