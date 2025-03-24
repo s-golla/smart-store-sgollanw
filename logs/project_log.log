@@ -103,3 +103,19 @@
 2025-03-23 17:26:15.508 | INFO     | __main__:clean_dataframe:57 - Filtered sales data to include only allowed PaymentTypes: ['Card', 'Cash'].
 2025-03-23 17:26:15.511 | INFO     | __main__:process_data:79 - Prepared data saved to data/prepared/sales_data_prepared.csv
 2025-03-23 17:26:15.511 | INFO     | __main__:<module>:105 - Data preparation completed.
+2025-03-23 22:03:27.795 | INFO     | __main__:<module>:84 - Starting the data preparation process...
+2025-03-23 22:03:27.811 | INFO     | __main__:process_data:68 - Loaded and preprocessed raw data.
+2025-03-23 22:03:27.811 | INFO     | __main__:verify_columns:27 - Verifying columns and data types...
+2025-03-23 22:03:27.811 | INFO     | __main__:verify_columns:41 - Column validation succeeded.
+2025-03-23 22:03:27.822 | INFO     | __main__:clean_dataframe:53 - Removed duplicates.
+2025-03-23 22:03:27.823 | INFO     | __main__:clean_dataframe:55 - Filtered products based on StockQuantity.
+2025-03-23 22:03:27.826 | INFO     | __main__:process_data:75 - Prepared data saved to data/prepared/products_data_prepared.csv
+2025-03-23 22:03:27.826 | INFO     | __main__:<module>:98 - Data preparation completed.
+2025-03-23 22:03:39.952 | INFO     | __main__:<module>:85 - Starting the data preparation process...
+2025-03-23 22:03:39.972 | INFO     | __main__:process_data:69 - Loaded and preprocessed raw data.
+2025-03-23 22:03:39.973 | INFO     | __main__:verify_columns:27 - Verifying columns and data types...
+2025-03-23 22:03:39.973 | INFO     | __main__:verify_columns:41 - Column validation succeeded.
+2025-03-23 22:03:39.974 | INFO     | __main__:clean_dataframe:53 - Removed duplicates.
+2025-03-23 22:03:39.976 | INFO     | __main__:clean_dataframe:55 - Filtered cutsomers based on LoyaltyPoints.
+2025-03-23 22:03:39.981 | INFO     | __main__:process_data:76 - Prepared data saved to data/prepared/customers_data_prepared.csv
+2025-03-23 22:03:39.981 | INFO     | __main__:<module>:99 - Data preparation completed.
