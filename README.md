@@ -1,5 +1,4 @@
 # smart-store-sgollanw
-
 -----
 
 ## Project Setup Guide (1-Mac/Linux)
@@ -121,19 +120,78 @@ py scripts/data_preparation/prepare_sales_data.py
 
 -----
 
-### Data warehouse data screenshots / reference
 
-Customers data:
+### Database Table Design
 
-![customers data table](customer_data.jpg)
+#### Customers Table
 
-Products data:
+| Column Name              | Data Type | Constraints       | Description                          |
+|--------------------------|-----------|-------------------|--------------------------------------|
+| `customer_id`            | INTEGER   | PRIMARY KEY       | Unique identifier for each customer |
+| `name`                   | TEXT      |                   | Name of the customer                |
+| `region`                 | TEXT      |                   | Geographic region of the customer   |
+| `join_date`              | TEXT      |                   | Date the customer joined            |
+| `loyalty_points`         | INTEGER   |                   | Loyalty points earned by the customer |
+| `preferred_contact_method` | TEXT    |                   | Preferred method of contact         |
 
-![products data table](products_data.jpg)
+#### Products Table
 
-Sales data:
+| Column Name      | Data Type | Constraints       | Description                          |
+|------------------|-----------|-------------------|--------------------------------------|
+| `product_id`     | INTEGER   | PRIMARY KEY       | Unique identifier for each product  |
+| `product_name`   | TEXT      |                   | Name of the product                 |
+| `category`       | TEXT      |                   | Category of the product             |
+| `unit_price`     | REAL      |                   | Price per unit of the product       |
+| `stock_quantity` | INTEGER   |                   | Quantity of product in stock        |
+| `supplier`       | TEXT      |                   | Supplier of the product             |
 
-![sales data table](sales_data.jpg)
+#### Sales Table
+
+| Column Name       | Data Type | Constraints                          | Description                          |
+|-------------------|-----------|--------------------------------------|--------------------------------------|
+| `transaction_id`  | INTEGER   | PRIMARY KEY                          | Unique identifier for each transaction |
+| `sale_date`       | TEXT      |                                      | Date of the sale                     |
+| `customer_id`     | INTEGER   | FOREIGN KEY REFERENCES `customers`   | ID of the customer making the purchase |
+| `product_id`      | INTEGER   | FOREIGN KEY REFERENCES `products`    | ID of the product being purchased    |
+| `store_id`        | INTEGER   |                                      | ID of the store where the sale occurred |
+| `campaign_id`     | INTEGER   |                                      | ID of the marketing campaign         |
+| `sale_amount`     | REAL      |                                      | Total amount of the sale             |
+| `discount_percent`| INTEGER   |                                      | Discount percentage applied          |
+| `payment_type`    | TEXT      |                                      | Payment method used                  |
+
+
+**Relationships:**
+
+```
+`sales.customer_id` → References customers.customer_id.
+`sales.product_id` → References products.product_id.
+```
 
 -----
 
+
+### Load Data into the Data Warehouse
+
+```shell
+py scripts/etl_to_dw.py
+```
+
+-----
+
+
+### Data warehouse sample data screenshots / reference
+
+**Customers data:**
+
+![customers data table](customer_data.jpg)
+
+**Products data:**
+
+![products data table](products_data.jpg)
+
+**Sales data:**
+
+![sales data table](sales_data.jpg)
+
+
+-----
