@@ -186,20 +186,90 @@ py scripts/etl_to_dw.py
 
 -----
 
+## SQL Queries and Reports
 
-### Data warehouse sample data screenshots / reference
+### SQL Queries
+Below are some example SQL queries used to analyze the data in the data warehouse:
+
+1. **Top 5 Customers by Loyalty Points**:
+   ```sql
+   SELECT name, loyalty_points
+   FROM customers
+   ORDER BY loyalty_points DESC
+   LIMIT 5;
+   ```
+
+2. **Total Sales by Product**:
+   ```sql
+   SELECT p.product_name, SUM(s.sale_amount) AS total_sales
+   FROM sales s
+   JOIN products p ON s.product_id = p.product_id
+   GROUP BY p.product_name
+   ORDER BY total_sales DESC;
+   ```
+
+3. **Sales by Region**:
+   ```sql
+   SELECT c.region, SUM(s.sale_amount) AS total_sales
+   FROM sales s
+   JOIN customers c ON s.customer_id = c.customer_id
+   GROUP BY c.region
+   ORDER BY total_sales DESC;
+   ```
+
+4. **Payment Method Distribution**:
+   ```sql
+   SELECT payment_type, COUNT(*) AS transaction_count
+   FROM sales
+   GROUP BY payment_type;
+   ```
+
+### Reports
+The SQL queries above were used to generate insights such as:
+- Identifying the most loyal customers.
+- Understanding which products generate the most revenue.
+- Analyzing sales performance by region.
+- Determining the most popular payment methods.
+
+-----
+
+## Dashboard Design
+
+### Design Choices
+The dashboard was designed with the following principles:
+1. **Clarity**: Focused on presenting key metrics like total sales, top products, and customer loyalty in a clear and concise manner.
+2. **Interactivity**: Included filters for regions, products, and time periods to allow dynamic exploration of the data.
+3. **Visualization**: Used bar charts, pie charts, and line graphs to represent data trends and distributions effectively.
+
+### Power BI Model View / Spark SQL Schema
+Below is the Power BI Model View or Spark SQL Schema used to design the relationships between tables:
+
+![Power BI Model View](screenshots/model_view.jpg)
+
+### Query Results
+Here is a screenshot of the query results for "Total Sales by Product":
+
+![Query Results](screenshots/query_results.jpg)
+
+### Final Dashboard / Charts
+Below is the final dashboard showcasing key metrics and insights:
+
+![Final Dashboard](screenshots/final_dashboard.jpg)
+
+-----
+
+## Data Warehouse Sample Data Screenshots / Reference
 
 **Customers data:**
 
-![customers data table](customer_data.jpg)
+![customers data table](screenshots/customer_data.jpg)
 
 **Products data:**
 
-![products data table](products_data.jpg)
+![products data table](screenshots/products_data.jpg)
 
 **Sales data:**
 
-![sales data table](sales_data.jpg)
-
+![sales data table](screenshots/sales_data.jpg)
 
 -----
