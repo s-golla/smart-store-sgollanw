@@ -244,17 +244,17 @@ The dashboard was designed with the following principles:
 ### Power BI Model View / Spark SQL Schema
 Below is the Power BI Model View or Spark SQL Schema used to design the relationships between tables:
 
-![Power BI Model View](screenshots/model_view.jpg)
+![Power BI Model View](images/model_view.jpg)
 
 ### Query Results
 Here is a screenshot of the query results for "Total Sales by Product":
 
-![Query Results](screenshots/query_results.jpg)
+![Query Results](images/query_results.jpg)
 
 ### Final Dashboard / Charts
 Below is the final dashboard showcasing key metrics and insights:
 
-![Final Dashboard](screenshots/final_dashboard.jpg)
+![Final Dashboard](images/final_dashboard.jpg)
 
 -----
 
@@ -262,14 +262,14 @@ Below is the final dashboard showcasing key metrics and insights:
 
 **Customers data:**
 
-![customers data table](screenshots/customer_data.jpg)
+![customers data table](images/customer_data.jpg)
 
 **Products data:**
 
-![products data table](screenshots/products_data.jpg)
+![products data table](images/products_data.jpg)
 
 **Sales data:**
 
-![sales data table](screenshots/sales_data.jpg)
+![sales data table](images/sales_data.jpg)
 
 -----
